@@ -128,7 +128,7 @@ data.forEach((student) => {
 });
 
 const allSubjects = Array.from(subjectMap.values());
-console.log(allSubjects)
+
 
 const notessubmit=()=>{
   const data={name:notsem,
@@ -199,9 +199,7 @@ const handndledeletenotes=async(e,x)=>{
                                 height={70}
                                 ></Image>
           <Navbar.Brand 
-          onClick={()=>{
-           fetchmark();
-          }}
+         
           style={{ color: 'white',cursor:'pointer',paddingLeft:"20px" }}>Studenthomepage</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
