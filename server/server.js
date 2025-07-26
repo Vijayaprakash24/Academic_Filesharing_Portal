@@ -9,7 +9,8 @@ const upload=multer();
 const app=express();
 app.use(cors());
 app.use(express.json({limit:'10mb'}));
-mongoose.connect('mongodb+srv://student:student@academicportal.iudjtr9.mongodb.net/',{serverSelectionTimeoutMS: 100000 }).then(()=>{
+
+mongoose.connect(process.env.RESTAPI_DBCONNECT,{serverSelectionTimeoutMS: 100000 }).then(()=>{
     console.log("Database is connected")
 }).catch((err)=>{console.log(err)})
 
@@ -574,5 +575,5 @@ app.delete("/faculty/:id/notes/:notesid", async (req, res) => {
 
 
 
-const port=7841;
+const port=process.env.PORT || 4000;
 app.listen(port,()=>console.log("the server responding at"+port))
