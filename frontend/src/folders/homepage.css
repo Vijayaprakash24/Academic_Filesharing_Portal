@@ -1,0 +1,35 @@
+.lab{
+    display: flex;
+   justify-content: flex-end;
+  align-items: center; 
+  padding-top: 03%;
+ 
+   padding-left: 10%;
+   padding-right: 10%;
+  gap: 25px;
+
+   height: 100vh;
+   width: 100vw;
+
+   background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("https://t3.ftcdn.net/jpg/02/92/90/56/360_F_292905667_yFUJNJPngYeRNlrRL4hApHWxuYyRY4kN.jpg");
+        background-position: center;
+        
+}
+
+.for{
+   border: 1px solid white; 
+   border-radius: 10px;
+  display: flex;
+  flex-direction: column; 
+  padding-left:50px;
+  padding-top: 30px; 
+  padding-right: 50px;
+  padding-bottom: 19px;
+ background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+ 
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+  color: black !important;
+}

@@ -1,0 +1,105 @@
+
+.upload-facultybackground {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main background image layer */
+.upload-facultybackground::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://previews.123rf.com/images/monsitj/monsitj1710/monsitj171000055/92367038-3d-rendering-of-virtual-human-silhouette-on-technology-background-illustration-concept-of-online.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+/* Dark overlay on top of image */
+.upload-facultybackground::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darker or lighter */
+  z-index: -1;
+}
+
+/* For dark theme, swap background image */
+.theme-facultydark::before {
+  background-image: url("https://t4.ftcdn.net/jpg/04/95/28/65/360_F_495286577_rpsT2Shmr6g81hOhGXALhxWOfx1vOQBa.jpg");
+}
+
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Button Zoom Animation on Hover */
+.button-animate {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  will-change: transform;
+}
+
+.button-animate:hover {
+  transform: scale(1.05);
+  background-color: #ffa500 !important;
+  color: white !important;
+}
+
+/* Navbar fade effect on load */
+.navbar-fade {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Card animation on load */
+.card-animate {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Slide-in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Card Hover Animation */
+.card-hover-animate {
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+.card-hover-animate:hover {
+  transform: translateY(-10px) scale(1.03);
+  background-color: rgba(255, 255, 255, 0.85); /* White with background opacity */
+   filter: drop-shadow(0 0 2em #61dafbaa);
+  cursor: pointer;
+}
+
+
+
+
+

@@ -1,0 +1,73 @@
+
+
+
+ .navbar .navbar-brand{
+   padding-right:90%;
+   
+ 
+
+}  
+
+
+.iam{
+  color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+       
+       
+}
+.theam {
+  background-color: #FAFA33;
+  border: none; /* Optional for Bootstrap buttons */
+}
+
+.theam:hover {
+  background-color: #5B3CC4;
+}
+
+.theam1 {
+  background-color: red;
+  border: none; /* Optional for Bootstrap buttons */
+}
+
+.bit:hover {
+  color: blue;
+}
+
+
+.upload-backgroundst {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main background image layer */
+.upload-backgroundst::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/032/475/285/small_2x/graduates-holding-mortarboard-and-diploma-at-graduation-ceremony-graduation-concept-graduation-ceremony-concept-hat-and-diploma-up-raised-hands-closeup-ai-generated-free-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+/* Dark overlay on top of image */
+.upload-backgroundst::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity for darker or lighter */
+  z-index: -1;
+}
+
+/* For dark theme, swap background image */
+.theme-dark1::before {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-college-entrance-examination-struggle-to-youth-silhouette-banner-background-image_245434.jpg");
+}
+
+
+
+

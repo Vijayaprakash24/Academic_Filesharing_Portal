@@ -1,0 +1,63 @@
+.uploaddiv{
+    display: flex;
+   
+     flex-direction: column;
+
+    min-height: 100vh;
+    /* max-height: fit-content; */
+     align-items: center;
+     width: 100vw;
+    
+    
+
+}
+.im{ background-repeat: no-repeat;
+     background-position: center;
+    background-size: cover;
+  min-height: 88vh;
+    max-height: fit-content;
+  }
+.uploadform{
+    display: flex;
+     border: 1px solid ;
+    flex-direction: column;
+    padding-left:50px;
+  padding-top: 30px; 
+  padding-right: 50px;
+   padding-bottom: 10px;
+   max-height: fit-content;
+   max-width: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+   color:white
+}
+.upload-background {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main background image layer */
+.upload-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/57955a906b8f5b356abb8b1b/1599124754591-CX2NUBKNQ0OXYYXKAVMS/DSCF2171-Edit-2.jpg?format=1500w");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+/* Dark overlay on top of image */
+.upload-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darker or lighter */
+  z-index: -1;
+}
+
+/* For dark theme, swap background image */
+.theme-dark::before {
+  background-image: url("https://www.newzealandscapes.co.nz/cdn/shop/files/Mount-Cook-Perfect-Sunset-2130px-Wide_586f1e91-a243-44ba-8042-bb89fa850e04.jpg?v=1726451653&width=2400");
+}

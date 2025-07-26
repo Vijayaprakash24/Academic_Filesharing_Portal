@@ -1,0 +1,54 @@
+.signupform{
+     display: flex;
+     border: 1px solid white;
+    flex-direction: column;
+    padding-left:50px;
+  padding-top: 30px; 
+  padding-right: 50px;
+  min-width: 38%;
+  border-radius: 10px;
+   padding-bottom: 10px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color:white
+
+}
+
+
+.pagediv{
+    display: flex;
+   
+    padding-left: 15%;
+     padding-top: 0%;
+}
+.imgdiv{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("https://static.vecteezy.com/system/resources/previews/007/252/575/non_2x/businessman-holding-global-internet-connection-technology-business-and-digital-marketing-free-photo.jpg");
+        background-position: center;
+        min-height: 100vh;
+ 
+    
+}
+
+.spanclass{
+
+  background-color: white;
+}
+
+.spanclass:hover{
+  background-color:#c6d3dd ;
+}
+
+.divclass{
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  
+}
+
+.buttonclassfaculty:hover{
+  background-color: #4B32B5;
+  font-weight: bold;
+}
