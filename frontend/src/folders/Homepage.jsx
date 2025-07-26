@@ -8,8 +8,8 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 
 const Homepage = () => {
-  const api = "http://localhost:7841/student";
-  const facultyapi = "http://localhost:7841/faculty";
+  const api = "https://academic-fileshare-portal-server.onrender.com/student";
+  const facultyapi = "https://academic-fileshare-portal-server.onrender.com/faculty";
   const [faclist, setFaclist] = useState([]);
   const [stdreg, setStdreg] = useState();
   const [list, setList] = useState([]);

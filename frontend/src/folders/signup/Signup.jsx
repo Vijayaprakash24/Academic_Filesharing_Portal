@@ -11,9 +11,9 @@ import axios from 'axios';
 
 
 const Signup = () => {
-const studentapi="http://localhost:7841/student";
+const studentapi="https://academic-fileshare-portal-server.onrender.com/student";
 
-const facultyapi="http://localhost:7841/faculty"
+const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
 
   const [state, setState] = useState(true);
   const navigate=useNavigate();

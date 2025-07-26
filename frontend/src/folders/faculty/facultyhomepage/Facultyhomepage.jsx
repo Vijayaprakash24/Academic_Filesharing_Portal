@@ -21,8 +21,8 @@ import img from '../../../img.png'
 
 const Facultyhomepage = () => {
 const {thempars,id}=useParams();
-const facultyapi="http://localhost:7841/faculty"
-const studentapi="http://localhost:7841/student"
+const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
+const studentapi="https://academic-fileshare-portal-server.onrender.com/student"
 const navigate=useNavigate()
 
 

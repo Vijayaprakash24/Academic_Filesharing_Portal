@@ -14,8 +14,8 @@ const Edit = () => {
 
     const navigate=useNavigate();
   const [state, setState] = useState(role==='true');
-  const studentapi="http://localhost:7841/student";
-  const facultyapi="http://localhost:7841/faculty";
+  const studentapi="https://academic-fileshare-portal-server.onrender.com/student";
+  const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty";
 
   const [stdname, setStdname] = useState();
   const [stdregno, setStdregno] = useState();

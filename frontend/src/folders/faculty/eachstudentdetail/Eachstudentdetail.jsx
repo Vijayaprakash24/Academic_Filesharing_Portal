@@ -19,8 +19,8 @@ import img from '../../../img.png'
 
 const Eachstudentdetail = () => {
 
-  const studentapi="http://localhost:7841/student";
-  const facultyapi="http://localhost:7841/faculty"
+  const studentapi="https://academic-fileshare-portal-server.onrender.com/student";
+  const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
   const [list,setList]=useState([])
   const [value,setValue]=useState([])
   const [value1,setValue1]=useState([])

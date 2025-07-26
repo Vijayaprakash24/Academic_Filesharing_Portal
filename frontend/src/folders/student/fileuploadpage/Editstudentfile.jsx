@@ -18,7 +18,7 @@ import img from '../../../img.png'
 const Editstudentfile = () => {
   const { thempars,id,id1 } = useParams();
  const [list,setList]=useState([])
-  const studentapi="http://localhost:7841/student";
+  const studentapi="https://academic-fileshare-portal-server.onrender.com/student";
 
   const [state, setState] = useState(true);
   const navigate = useNavigate();

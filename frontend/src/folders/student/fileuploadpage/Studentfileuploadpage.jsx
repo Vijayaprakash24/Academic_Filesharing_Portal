@@ -18,7 +18,7 @@ import img from '../../../img.png'
 const Studentfileuploadpage = () => {
   const { thempars,id } = useParams();
  
-  const studentapi="http://localhost:7841/student";
+  const studentapi="https://academic-fileshare-portal-server.onrender.com/student";
 
   const [state, setState] = useState(true);
   const [formType, setFormType] = useState('certificate');
