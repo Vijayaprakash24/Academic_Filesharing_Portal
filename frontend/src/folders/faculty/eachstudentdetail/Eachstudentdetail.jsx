@@ -216,7 +216,7 @@ const handndledownload = (filename, b64string) => {
   <button 
   onClick={(e)=>{
    navigate(`/facultyhomepage/${them}/${facid}`)
-   alert(facid)
+  
 
   }}
   

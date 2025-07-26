@@ -84,7 +84,7 @@ const Homepage = () => {
       if (valid) {
         if (answerstd == finalstd) {
           alert("Login successfully");
-          alert(value._id);
+         
           navigate(`/studentfrontpage/${value._id}/${true}`);
         } else {
           alert("Captcha is wrong!");
@@ -106,7 +106,7 @@ const Homepage = () => {
       if (valid) {
         if (anser1 == final) {
           alert("Faculty Login Sucessfully");
-          alert(value._id);
+         
           navigate(`/facultyhomepage/${true}/${value._id}`);
         } else {
           alert("Captcha is wrong!");
