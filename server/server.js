@@ -203,7 +203,6 @@ app.delete('/student/:id/semester/:sem', async (req, res) => {
 
 app.post("/student/certificate/:id",async(req,res)=>{
   const {id}=req.params;
-  console.log("certificate")
   const {title,date,description,certificate}=req.body;
   const list=await model.findById(id)
   try{
@@ -223,7 +222,7 @@ app.post("/student/certificate/:id",async(req,res)=>{
 
 app.post("/student/notes/:id",async(req,res)=>{
   const {id}=req.params;
-  console.log("certificate")
+
   const {sem,subject,file}=req.body;
   const list=await model.findById(id)
   try{
