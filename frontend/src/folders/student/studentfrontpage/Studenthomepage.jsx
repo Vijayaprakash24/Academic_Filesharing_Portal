@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image'
-import './Studenthomepage.css'
+import './studenthomepage.css'
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import Card from 'react-bootstrap/Card';
 import { FaPlus } from "react-icons/fa";
