@@ -522,7 +522,9 @@ const handndledeletenotes=async(e,x)=>{
           <Card className="mb-2" bg="light">
             <Card.Body>
               <strong>Subject: {sub.subject}</strong><br />
+             
               {sub.grades?.map((x, index) => (
+                
                 <div key={index}>
                   {x.grade} {x.count}
                 </div>
