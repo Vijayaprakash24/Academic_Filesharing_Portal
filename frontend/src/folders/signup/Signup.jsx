@@ -61,10 +61,11 @@ const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
   }
 
 const handlesubmitstutent=async(e)=>{
+  e.preventDefault();
   const val=list.some((x)=>x.regno===stdregno)
  
   if(val){
-    e.preventDefault();
+    
      if(!stdname||!stdregno||!stdclass||!stdadvisor||!stddepart||!stdpass){
       alert("Enter all the field")
      }
@@ -104,7 +105,8 @@ const handlesubmitstutent=async(e)=>{
 }
 
 
-const facultypostdata=async()=>{
+const facultypostdata=async(e)=>{
+  e.preventDefault();
    const val=list.some((x)=>x.facultyid===facid)
    if(val){
   if(!facname||!facid||!facdept||!facpass){
@@ -160,7 +162,7 @@ const facultypostdata=async()=>{
               className='image'
             />
 
-            <Form className='signupform card-animate' onSubmit={handlesubmitstutent}>
+            <Form className='signupform card-animate'>
 
               <div className='divclass  card-animate'>
                 <Button
@@ -341,7 +343,7 @@ const facultypostdata=async()=>{
                 <Button className='buttonclassfaculty '
                   variant="outline-primary"
                   type="submit"
-                 
+                  onClick={handlesubmitstutent}
                 >
                   Submit
                 </Button>
