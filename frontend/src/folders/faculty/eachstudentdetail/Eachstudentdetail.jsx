@@ -29,7 +29,7 @@ const Eachstudentdetail = () => {
   const [sembutton,setSembutton]=useState(false)
 
 const {stdid,thempars,facid}=useParams()
-console.log(facid)
+
 const navigate=useNavigate()
 const [color1,setColor1]=useState('white')
 const [them,setThem]=useState(thempars==='true')
@@ -52,6 +52,7 @@ const [sem,setSem]=useState()
       try {
         const res = await axios.get(`${studentapi}/${stdid}/semester/${selectedSemester}`);
       setMarks(res.data);
+     
    
       } catch (error) {
     

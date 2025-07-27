@@ -95,7 +95,7 @@ const fetchmark=async()=>{
   const res=await axios.get(`${facultyapi}/mark/${marks}/${val.facultyname}`)
   
    const mergedMarks = {};
-if(res.data>0){
+if(res.data.length>0){
   res.data?.forEach((entry) => {
     const key = entry.subject.toLowerCase();
     if (!mergedMarks[key]) {

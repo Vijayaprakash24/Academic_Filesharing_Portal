@@ -67,7 +67,7 @@ const mark1=(sem)=>{
   setFinal(result)
  }
   else{
-    alert("Sem mark not submited  from you")
+    alert("Sem notes not submited  by anyone")
   }
 }
 
