@@ -204,6 +204,7 @@ const handndledeletenotes=async(e,x)=>{
 } 
 
   const handndledownload = (filename, b64string) => {
+    console.log(b64string)
   
   if (!b64string || typeof b64string !== "string" || !b64string.startsWith("data:")) {
     console.error("Invalid Base64 string:", b64string);

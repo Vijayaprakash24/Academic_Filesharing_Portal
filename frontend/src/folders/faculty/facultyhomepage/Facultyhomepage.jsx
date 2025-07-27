@@ -161,7 +161,7 @@ const notessubmit=()=>{
     subject:sub,
     department:notedept,
     classname:cla,
-    file:fil}
+    file:result}
     try{
   const list =axios.post(`${facultyapi}/notes/${id}`,data)
    alert("Updated sucessfully")
