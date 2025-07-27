@@ -25,7 +25,7 @@ const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
 const studentapi="https://academic-fileshare-portal-server.onrender.com/student"
 const navigate=useNavigate()
 
-
+const [result,setResult]=useState()
 
  const [show, setShow] = useState(false);
 
@@ -171,7 +171,7 @@ const notessubmit=()=>{
 }
 
 
-const fileupload=()=>{
+const fileupload=(e)=>{
   const file=e.target.files[0];
   try{
     if(file){
@@ -179,9 +179,10 @@ const fileupload=()=>{
     filerender.onload=function(e){
             const base64=e.target.result;
             setResult(base64)
+            console.log(base64)
             
           }
-          render.readAsDataURL(file)
+          filerender.readAsDataURL(file)
        
         }
   }catch(err){
