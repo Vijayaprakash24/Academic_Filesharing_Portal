@@ -160,7 +160,7 @@ const facultypostdata=async()=>{
               className='image'
             />
 
-            <Form className='signupform card-animate'>
+            <Form className='signupform card-animate' onSubmit={handlesubmitstutent}>
 
               <div className='divclass  card-animate'>
                 <Button
@@ -340,8 +340,8 @@ const facultypostdata=async()=>{
               <div style={{ display: 'flex', justifyContent: "center" }}>
                 <Button className='buttonclassfaculty '
                   variant="outline-primary"
+                  type="submit"
                  
-                  onClick={handlesubmitstutent}
                 >
                   Submit
                 </Button>
