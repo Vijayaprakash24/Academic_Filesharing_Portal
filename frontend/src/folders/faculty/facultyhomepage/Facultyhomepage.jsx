@@ -93,7 +93,29 @@ useEffect(()=>{
 const fetchmark=async()=>{
 
   const res=await axios.get(`${facultyapi}/mark/${marks}/${val.facultyname}`)
-  setMark(res.data)
+  
+   const mergedMarks = {};
+
+  res.data?.forEach((entry) => {
+    const key = entry.subject.toLowerCase();
+    if (!mergedMarks[key]) {
+      mergedMarks[key] = {
+        subject: entry.subject, 
+        grades: [...entry.grades],
+      };
+    } else {
+      entry.grades.forEach((g) => {
+        const existing = mergedMarks[key].grades.find((x) => x.grade === g.grade);
+        if (existing) {
+          existing.count += g.count;
+        } else {
+          mergedMarks[key].grades.push({ ...g });
+        }
+      });
+    }
+    const normalizedMarkList = Object.values(mergedMarks);
+    setMark(normalizedMarkList)
+  });
 
 
 }
@@ -491,31 +513,7 @@ const handndledeletenotes=async(e,x)=>{
       <Card.Header style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
         Semester: {marks}
       </Card.Header>
-     {(() => {
-  const mergedMarks = {};
-
-  mark?.forEach((entry) => {
-    const key = entry.subject.toLowerCase();
-    if (!mergedMarks[key]) {
-      mergedMarks[key] = {
-        subject: entry.subject, 
-        grades: [...entry.grades],
-      };
-    } else {
-      entry.grades.forEach((g) => {
-        const existing = mergedMarks[key].grades.find((x) => x.grade === g.grade);
-        if (existing) {
-          existing.count += g.count;
-        } else {
-          mergedMarks[key].grades.push({ ...g });
-        }
-      });
-    }
-  });
-
-  const normalizedMarkList = Object.values(mergedMarks);
-
-  return normalizedMarkList.map((sub, subIndex) => (
+     { mark.map((sub, subIndex) => (
     <Card.Body key={subIndex}>
       <Row>
         <Col sm={6} md={4}>
@@ -534,8 +532,8 @@ const handndledeletenotes=async(e,x)=>{
         </Col>
       </Row>
     </Card.Body>
-  ));
-})()}
+  ))
+}
     </Card>
    <div style={{display:'flex',justifyContent:'center'}}>
     <Button style={{backgroundColor:'red'}}
