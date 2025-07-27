@@ -95,7 +95,7 @@ const fetchmark=async()=>{
   const res=await axios.get(`${facultyapi}/mark/${marks}/${val.facultyname}`)
   
    const mergedMarks = {};
-
+if(res.data>0){
   res.data?.forEach((entry) => {
     const key = entry.subject.toLowerCase();
     if (!mergedMarks[key]) {
@@ -115,7 +115,10 @@ const fetchmark=async()=>{
     }
     const normalizedMarkList = Object.values(mergedMarks);
     setMark(normalizedMarkList)
-  });
+  
+  });}else{
+    alert("Marks are not uploaded by any students.")
+  }
 
 
 }
@@ -630,7 +633,7 @@ onClick={()=>fetchstudentmarks()}>click</Button>
 
 {select==='note'&&(
 <div style={{display:'flex',justifyContent:'center'}} className='card-animate'>
-<Form style={{paddingRight:'20%',backgroundColor:'red',padding:'5%'}}>
+<Form style={{paddingRight:'20%',backgroundColor:'white',borderRadius:"30px",padding:'30px'}}>
   <div style={{display:'flex',justifyContent:'center'}}>
   <h5 >Notes form</h5>
   </div>
@@ -648,7 +651,7 @@ onClick={()=>fetchstudentmarks()}>click</Button>
               <option>8</option>
         </Form.Select>
       </Form.Group>
-      <Form.Label>Select the Semester Mark to get</Form.Label>
+      <Form.Label>Select the Department name to submit notes</Form.Label>
              <Form.Select
   defaultValue=""
   onChange={(e) => {
@@ -658,7 +661,7 @@ onClick={()=>fetchstudentmarks()}>click</Button>
      alert(selectedSemester)
   }}
 >
-  <option disabled value="">Select the Semester</option>
+  <option disabled value="">Select the Department name to submit notes</option>
    <option>choose an option</option>
                    <option>CSE</option>
                   <option>AIML</option>
@@ -668,15 +671,16 @@ onClick={()=>fetchstudentmarks()}>click</Button>
                   <option>CHEMICAL</option>
 </Form.Select>
        <Form.Group as={Col} controlId="note-sem">
-        <Form.Label>Semester</Form.Label>
+        <Form.Label>Select Batch Year of the Students</Form.Label>
         <Form.Select onChange={(e) => setNoteyear(e.target.value)}>
-          <option>Select Semester</option>
+          <option>Select Year</option>
           {studentdetails.map((x,index)=>
           <option key={index}>{x}</option>
           )}
               
              
         </Form.Select>
+        <p>*it Show only the years registred By the Students</p>
       </Form.Group>
 
   <Form.Group as={Col} controlId="note-subject">

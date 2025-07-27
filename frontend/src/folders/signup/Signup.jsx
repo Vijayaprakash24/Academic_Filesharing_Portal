@@ -65,9 +65,13 @@ const handlesubmitstutent=async(e)=>{
      if(!stdname||!stdregno||!stdclass||!stdadvisor||!stddepart||!stdpass){
       alert("Enter all the field")
      }
+     else if(year.length>7||year.length<7){
+           alert("The Should be '2023-27' this formate and must have length 7 and yours year length is " + year.length)
+
+     }
 
 
-
+  else{
     try{
       if(stdconpass===stdpass){
    
@@ -90,6 +94,7 @@ const handlesubmitstutent=async(e)=>{
     console.error("Error  posting student:",err);
     alert("Failed to add student");
   }
+}
 }
 
 

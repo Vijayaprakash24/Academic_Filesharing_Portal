@@ -172,6 +172,20 @@ const Homepage = () => {
               <h6>Already have an account?</h6>
               <h6 style={{ cursor: 'pointer' }} onClick={() => navigate('/signup')}>Signup</h6>
             </div>
+             <div style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
+              
+              <h6 style={{ cursor: 'pointer' }} onClick={() =>
+                {
+                  const Confir=prompt("Enter the Student id?")
+                  const value = list.find((x) => x.regno === Confir)
+                  if(value){
+                  alert("The password is: "+ value.password)
+                  }else{
+                    alert("Regno is incorrect")
+                  }
+                }
+              }>Forgot Password?</h6>
+            </div>
           </Form>
         </motion.div>
 
@@ -218,6 +232,21 @@ const Homepage = () => {
             <div style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
               <h6>Already have an account?</h6>
               <h6 style={{ cursor: 'pointer' }} onClick={() => navigate('/signup')}>Signup</h6>
+            </div>
+             <div style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
+              
+              <h6 style={{ cursor: 'pointer' }} onClick={() =>
+                {
+                  const Confir=prompt("Enter the Student id?")
+                  const value =faclist.find((x) => x.facultyid === Confir);
+
+                  if(value){
+                  alert("The password is: "+ value.facultypassword)
+                  }else{
+                    alert("Regno is incorrect")
+                  }
+                }
+              }>Forgot Password?</h6>
             </div>
           </Form>
         </motion.div>
