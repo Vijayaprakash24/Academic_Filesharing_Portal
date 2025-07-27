@@ -12,12 +12,7 @@ app.use(cors());
 app.use(express.json({limit:'10mb'}));
 
 
-const router = express.Router();
 
-// define routes
-router.get('/', (req, res) => {
-  res.send('Student route working!');
-});
 
 
 
