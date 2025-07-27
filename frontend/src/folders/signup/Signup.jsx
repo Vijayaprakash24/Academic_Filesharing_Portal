@@ -61,6 +61,9 @@ const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
   }
 
 const handlesubmitstutent=async(e)=>{
+  const val=list.some((x)=>x.regno===stdregno)
+ 
+  if(val){
     e.preventDefault();
      if(!stdname||!stdregno||!stdclass||!stdadvisor||!stddepart||!stdpass){
       alert("Enter all the field")
@@ -95,10 +98,15 @@ const handlesubmitstutent=async(e)=>{
     alert("Failed to add student");
   }
 }
+  }else{
+    alert("Regno Already exist")
+  }
 }
 
 
 const facultypostdata=async()=>{
+   const val=list.some((x)=>x.facultyid===facid)
+   if(val){
   if(!facname||!facid||!facdept||!facpass){
     alert("Enter all the field")
   }
@@ -122,6 +130,9 @@ const facultypostdata=async()=>{
     console.error("Error  posting faculty:",err);
     alert("Failed to add faculty");
   }
+}else{
+   alert("Regno Already exist")
+}
 }
 
   return (
