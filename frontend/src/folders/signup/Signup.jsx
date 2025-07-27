@@ -41,12 +41,15 @@ const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
 
   const [list1,setList1]=useState([])
   const [list,setList]=useState([])
+  const [dat,setDat]=useState([])
 
 
   useEffect(()=>{
    const fetchdata=async()=>{
     const res=await axios.get(studentapi);
+    const da=await axios.get(facultyapi)
     setList1(res.data)
+    setDat(da.data)
     
    };fetchdata();
 
@@ -62,9 +65,9 @@ const facultyapi="https://academic-fileshare-portal-server.onrender.com/faculty"
 
 const handlesubmitstutent=async(e)=>{
   e.preventDefault();
-  const val=list.some((x)=>x.regno===stdregno)
- 
-  if(val){
+  const val=list1.filter((x)=>x.regno===stdregno)
+
+  if(val.length==0){
     
      if(!stdname||!stdregno||!stdclass||!stdadvisor||!stddepart||!stdpass){
       alert("Enter all the field")
@@ -105,13 +108,16 @@ const handlesubmitstutent=async(e)=>{
 }
 
 
-const facultypostdata=async(e)=>{
-  e.preventDefault();
-   const val=list.some((x)=>x.facultyid===facid)
-   if(val){
+const facultypostdata=async()=>{
+
+    const val=dat.filter((x)=>x.facultyid===facid)
+  
+
+  if(val.length==0){
+   
   if(!facname||!facid||!facdept||!facpass){
     alert("Enter all the field")
-  }
+  }else{
   try{
     if(facpass===facconpass){
     const faculty={
@@ -132,7 +138,8 @@ const facultypostdata=async(e)=>{
     console.error("Error  posting faculty:",err);
     alert("Failed to add faculty");
   }
-}else{
+}}
+else{
    alert("Regno Already exist")
 }
 }
