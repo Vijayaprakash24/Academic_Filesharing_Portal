@@ -222,12 +222,23 @@ const facultypostdata=async()=>{
 
               <Form.Group as={Col} className="mb-3" controlId="formGridAddress1">
                 <Form.Label>Class</Form.Label>
-                <Form.Control
-                  placeholder="ex A,B,C"
-                  onChange={(e) => setStdclass(e.target.value)
-                   
+                 <Form.Select
+                  defaultValue="Choose..."
+                  onChange={(e) => {
+                    const value=e.target.value;
+                     selectdept(value)
+                    setStdclass(value)}
                   }
-                />
+                >
+                  <option>Select </option>
+                    <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                  <option>E</option>
+                  <option>F</option>
+                 
+                </Form.Select>
               </Form.Group>
 
               <Form.Group as={Col} className="mb-3" controlId="formGridAddress2">
