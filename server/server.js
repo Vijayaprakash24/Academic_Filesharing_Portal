@@ -12,14 +12,6 @@ app.use(cors());
 app.use(express.json({limit:'10mb'}));
 
 
-app.use(express.static(path.resolve(__dirname, '../frontend/dist')));
-
-
-app.use((req, res, next) => {
-  res.sendFile(path.resolve(__dirname, '../frontend/dist/index.html'));
-});
-
-
 
 mongoose.connect(process.env.RESTAPI_DBCONNECT,{serverSelectionTimeoutMS: 100000 }).then(()=>{
     console.log("Database is connected")
