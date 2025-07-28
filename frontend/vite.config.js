@@ -5,15 +5,15 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist', // default is fine, but keep it explicit
+    outDir: 'dist', 
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src') // optional aliasing
+      '@': path.resolve(__dirname, 'src') 
     }
   },
   server: {
-    // This ensures dev server won't 404 on refresh in dev mode
+   
     historyApiFallback: true
   }
 })
