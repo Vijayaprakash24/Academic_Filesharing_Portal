@@ -12,7 +12,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://t3.ftcdn.net/jpg/08/83/76/36/360_F_883763663_0gTQgLjicsIW3O5h0PHVCdvW1QE7WIcE.jpg");
+  background-image: url("./file.jpg");
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -30,7 +30,7 @@
 
 /* For dark theme, swap background image */
 .theme-dark1::before {
-  background-image: url("https://t3.ftcdn.net/jpg/08/83/76/36/360_F_883763663_0gTQgLjicsIW3O5h0PHVCdvW1QE7WIcE.jpg");
+  background-image: url("./file.jpg");
   background-color: #141619;
 }
 

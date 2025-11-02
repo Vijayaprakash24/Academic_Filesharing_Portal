@@ -13,6 +13,7 @@ app.use(express.json({limit:'10mb'}));
 
 
 
+
 mongoose.connect(process.env.RESTAPI_DBCONNECT,{serverSelectionTimeoutMS: 100000 }).then(()=>{
     console.log("Database is connected")
 }).catch((err)=>{console.log(err)})

@@ -11,7 +11,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://previews.123rf.com/images/monsitj/monsitj1710/monsitj171000055/92367038-3d-rendering-of-virtual-human-silhouette-on-technology-background-illustration-concept-of-online.jpg");
+  background-image: url("./file.jpg");
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -28,7 +28,7 @@
 
 /* For dark theme, swap background image */
 .theme-facultydark::before {
-  background-image: url("https://t4.ftcdn.net/jpg/04/95/28/65/360_F_495286577_rpsT2Shmr6g81hOhGXALhxWOfx1vOQBa.jpg");
+  background-image: url("./file1.jpg");
 }
 
 

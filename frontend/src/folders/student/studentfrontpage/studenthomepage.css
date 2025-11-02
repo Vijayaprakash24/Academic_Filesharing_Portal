@@ -48,7 +48,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/032/475/285/small_2x/graduates-holding-mortarboard-and-diploma-at-graduation-ceremony-graduation-concept-graduation-ceremony-concept-hat-and-diploma-up-raised-hands-closeup-ai-generated-free-photo.jpg");
+  background-image: url("./file.jpg");
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -65,7 +65,7 @@
 
 /* For dark theme, swap background image */
 .theme-dark1::before {
-  background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-college-entrance-examination-struggle-to-youth-silhouette-banner-background-image_245434.jpg");
+  background-image: url("./file.jpg");
 }
 
 
