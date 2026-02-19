@@ -477,7 +477,7 @@ const handndledeletenotes=async(e,x)=>{
           height: '100%',
           
           display: 'flex',
-          gap:'100%',
+          gap:'10px',
           flexDirection: 'column',
         }}
       >
@@ -601,7 +601,7 @@ const handndledeletenotes=async(e,x)=>{
   <Row className="g-4 card-animate" style={{ width: "95%" }}>
      <Form style={{ backgroundColor: them ? 'white' : '#5B3CC4',
           color: them ? 'black' : 'white',borderRadius:"20px",paddingTop:"20px",paddingBottom:"20px"}}>
-   <Form.Label>Select the Semester Mark to get</Form.Label>
+   <Form.Label>Select the Semester Notes to get</Form.Label>
              <Form.Select
   defaultValue=""
   onChange={(e) => {
@@ -710,7 +710,7 @@ const handndledeletenotes=async(e,x)=>{
           height: '100%',
           
           display: 'flex',
-          gap:'100%',
+          gap:'10px',
           flexDirection: 'column',
         }}
       >
@@ -740,16 +740,16 @@ const handndledeletenotes=async(e,x)=>{
               flexDirection: 'column',
               gap: '10px',
               alignItems: 'center',
-             
+              
              
              
             }}
           >
 
-            <Button className=" card-animate car2"
+            <Button className=" card-animate"
               style={{
                 backgroundColor: them ? 'red' : '#2d2c2e',
-                border: 'none',
+                border: 'none'
                
               }}
               onClick={(e) => handndledeletenotes(e, x._id)}
